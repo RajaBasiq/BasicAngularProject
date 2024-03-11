@@ -20,5 +20,11 @@ export class HomeComponent implements OnInit {
       alert(data);
     });
   }
+  public getFiles()
+  {
+    this.fileservice.getPosts().subscribe((data: any[]) => {
+      console.log(data);
+    });
+  }
 
 }

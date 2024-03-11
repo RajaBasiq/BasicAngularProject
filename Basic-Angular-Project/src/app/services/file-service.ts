@@ -11,9 +11,9 @@ export class FileService {
 
   constructor(private http: HttpClient) { }
 
-//   getPosts(): Observable<any[]> {
-//     return this.http.get<any[]>(`${this.apiUrl}/getfile`);
-//   }
+  getPosts(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/GetAllFiles`);
+  }
 
   getPostById(id: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/getfile?fileid=${id}`);
